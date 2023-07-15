@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio JS 1</title>
+    <link rel="stylesheet" href="assets/CSS/style.css" />
+    <link rel="shortcut icon" type="icon/ico" href="assets/icons/favicon.ico" />
+</head>
+<body>
+
+    <div class="box">
+        <img src="assets\img\pc.png" alt="pc gamer">
+        <p class="product_name">Laptop gamer</p>
+        <input class="cantidad_input" type="number" placeholder="Cantidad">
+        <input class="color_input" type="text" placeholder="Color">
+        <p>Precio: $<span class="precio_input">400000</span></p>
+       
+       <button onclick="
+        cantidad_input = document.querySelector('.cantidad_input');
+        precio_input = document.querySelector('.precio_input');
+        precio_final = document.querySelector('.precio_final');
+        
+        precio_final.innerHTML = '$'+cantidad_input.value * precio_input.textContent;
+        
+        color_input = document.querySelector('.color_input').value;
+        color_final = document.querySelector('.circle');
+        color_final.style.backgroundColor=color_input;
+       
+    ">Calcular</button>
+    </div>
+
+   <div class="resultados">
+        <p>Total: <span class="precio_final">$0</span></p>
+        <p>Cantidad: <span class="cantidad_final">0</span></p>
+        <div class="color_display">
+        <p>Color:</p>
+        <div class="circle"></div>
+    </div>
+   </div>
+</body>
